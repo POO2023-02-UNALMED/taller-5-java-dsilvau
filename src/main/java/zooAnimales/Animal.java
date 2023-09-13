@@ -3,7 +3,6 @@ import gestion.Zona;
 
 public class Animal {
     private static int totalAnimales;
-
     private String nombre;
     private int edad;
     private String habitat;
@@ -15,9 +14,10 @@ public class Animal {
         this.edad = edad;
         this.habitat = habitat;
         this.genero = genero;
+        totalAnimales ++;
     }
 
-    public Animal() { }
+    public Animal() { totalAnimales ++;}
 
     public String movimiento() {
         return "desplazarse";
