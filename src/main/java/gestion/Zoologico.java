@@ -22,7 +22,11 @@ public class Zoologico {
     }
 
     public int cantidadTotalAnimales() {
-        return zonas.size();
+        int contador = 0;
+        for (int i=0; i< zonas.size();i++) {
+        	contador += this.zonas.get(i).cantidadAnimales();
+        }
+        return contador;		
     }
 
     public String getNombre() {
